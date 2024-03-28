@@ -19,6 +19,7 @@ import { toast } from "@/components/ui/use-toast";
 import Link from "next/link";
 import GoogleSignInButtonComponent from "./partials/GoogleSignInButtonComponent";
 
+// FORM VALIDATION
 const FormSchema = z.object({
   username: z.string().min(1, "Username is required").max(50),
   email: z.string().min(1, "Email is required").email("Email is invalid"),

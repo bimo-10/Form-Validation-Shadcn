@@ -19,6 +19,7 @@ import { toast } from "@/components/ui/use-toast";
 import Link from "next/link";
 import GoogleSignInButtonComponent from "./partials/GoogleSignInButtonComponent";
 
+// FORM VALIDATION
 const FormSchema = z.object({
   email: z.string().min(1, "Email is required").email("Email is invalid"),
   password: z
@@ -31,7 +32,8 @@ export default function SignInFormComponent() {
   const form = useForm({
     resolver: zodResolver(FormSchema),
     defaultValues: {
-      username: "",
+      email: "",
+      password: "",
     },
   });
 
